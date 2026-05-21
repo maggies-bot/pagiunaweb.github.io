@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Cultura Generale</title>
+
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#1976d2" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Quiz di Cultura Generale</h1>
+    <p>Scegli la materia e metti alla prova le tue conoscenze.</p>
+  </header>
+
+  <main>
+    <section id="subject-section">
+      <label for="subject-select">Materia:</label>
+      <select id="subject-select">
+        <option value="">-- Seleziona --</option>
+        <option value="matematica">Matematica</option>
+        <option value="scienze">Scienze</option>
+        <option value="fisica">Fisica</option>
+        <option value="italiano">Italiano</option>
+        <option value="arte">Arte</option>
+        <option value="geografia">Geografia</option>
+        <option value="storia">Storia</option>
+        <option value="filosofia">Filosofia</option>
+      </select>
+      <button id="start-quiz-btn">Inizia quiz</button>
+    </section>
+
+    <section id="quiz-section" class="hidden">
+      <div id="question-container"></div>
+      <button id="submit-quiz-btn">Invia risposte</button>
+    </section>
+
+    <section id="result-section" class="hidden">
+      <h2>Risultato</h2>
+      <p id="score-text"></p>
+      <p id="grade-text"></p>
+      <h3>Errori</h3>
+      <ul id="errors-list"></ul>
+
+      <h3>Storico locale</h3>
+      <ul id="history-list"></ul>
+
+      <button id="retry-btn">Rifai quiz</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>Progetto PWA - Informatica</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
